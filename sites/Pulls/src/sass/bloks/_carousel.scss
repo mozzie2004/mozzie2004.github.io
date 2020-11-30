@@ -1,0 +1,55 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__wrapper {
+        position: relative;
+        width: 828px;
+        text-align: center;
+        line-height: 576px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    &__item {
+        display: inline-block;
+        width: 90%;
+    }
+    &__slider {
+        display: flex;
+    }
+    &__left, &__right {
+        position: absolute;
+        left: -60px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 100000000000;
+    }
+    &__right {
+        left: auto;
+        right: -60px;
+    }
+}
+
+@media (max-width: 992px) {
+    .carousel {
+        &__left, &__right {
+            left: 10px;
+        }
+        &__right {
+            left: auto;
+            right: 10px;
+        }
+        &__item {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel {
+        &__wrapper {
+            line-height: 380px;
+            margin: 0;
+        } 
+    }
+}

@@ -1,0 +1,25 @@
+* {
+    font-family: 'Museo Sans Cyrl', sans-serif ;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+@import "bloks/container";
+@import "bloks/header";
+@import "bloks/_promo";
+@import "bloks/buttons";
+@import "bloks/advantages";
+@import "bloks/title";
+@import "bloks/consultation";
+@import "bloks/form.scss";
+@import "bloks/carousel.scss";
+@import "bloks/catalog";
+@import "bloks/cart";
+@import "bloks/reviews";
+@import "bloks/map";
+@import "bloks/contacts";
+@import "bloks/popup";
+@import "bloks/loader";
