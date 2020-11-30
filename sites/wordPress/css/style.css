@@ -210,7 +210,7 @@ h1 {
 }
 
 .descr {
-    height: 550px;
+    min-height: 550px;
     border: 1px solid white;
 }
 
@@ -520,6 +520,9 @@ footer a {
         width: 270px;
         height: 55px;
     }
+    .opti {
+        padding: 50px 0;
+    }
     .opti .wrapper {
         flex-wrap: wrap;
     }
@@ -537,6 +540,12 @@ footer a {
     }
     .finish_tittle {
         font-size: 18px;
+    }
+    .descr {
+        padding: 40px 0;
+    }
+    .descr_text_wrapper {
+        margin: 0;
     }
     .gift_text {
         font-size: 16px;
