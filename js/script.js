@@ -18,18 +18,10 @@ window.addEventListener('DOMContentLoaded', ()=>{
         menu.classList.remove('active');
     });
 
+    
     // form 
 
-    async function postForm(url='', data={}){
-        const response = await fetch(url, {
-            method: 'POST',
-            body: data
-        });
-
-        return await response.text();
-    }
-
-    // form 
+    
 
     async function postForm(url='', data={}){
         const response = await fetch(url, {
@@ -46,9 +38,13 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
     form.addEventListener('submit', (e)=>{
         e.preventDefault();
+        let path = 'php/server.php';
+        if (window.navigator.language.slice(0, 2) === 'ru') {
+             path = '../php/server.php';
+        } 
         spinner.classList.remove('lds-ellipsis_hidden');
         const formData = new FormData(form);
-        postForm('php/server.php', formData)
+        postForm(path, formData)
         .then(res=>{
             spinner.classList.add('lds-ellipsis_hidden');
             const div = document.createElement('div');
@@ -80,5 +76,6 @@ window.addEventListener('DOMContentLoaded', ()=>{
                }, 3000);
         })
     })
+
 })
 
